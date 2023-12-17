@@ -326,7 +326,7 @@ p {
 }
 
 #Porque .container-fluidd {
-  margin-top: 4em;
+  margin-top: 2em;
   margin-left: 6em !important;
   padding: 0 !important;
   margin-right: 1em !important;
@@ -342,7 +342,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 10em;
+  margin-bottom: 8em;
 }
 
 .custom-card .col-auto {
@@ -386,7 +386,7 @@ p {
 }
 
 #Ventajas {
-  margin-left: 8em !important;
+  margin-left: 10em !important;
 }
 
 #Ventajas h2 {
@@ -397,34 +397,22 @@ p {
  
 }
 
-#Ventajas .container{
+#Ventajas .containerr{
+  margin-top: 2em;
   margin-left: 6em !important;
+  padding: 0 !important;
+  margin-right: 1em !important;
+}
+#Ventajas .row{
+  padding: 0 !important;
+  margin-right: 2em !important;
 
 }
-#Ventajas .custom-card {
-  width: 15.5em;
-  height: 23.5em;
-  background-color: #18181c !important;
-  border-radius: 1.25em;
-  padding: 1.25em;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #fff;
-  
-}
 
-#Ventajas .custom-card img {
-  width: 6.5em;
+#Ventajas .containerr .custom-card img {
+  width: 6.5em !important;
   height: 6.5em;
   margin-top: 0.625em;
-}
-
-.container-fluidd {
-  display: flex;
-  justify-items: center;
-  padding: 0 !important;
 }
 
 .solucion {
@@ -805,12 +793,14 @@ footer{
    
    
   }
-  #Ventajas .container{
+  #Ventajas .containerr{
     margin-left: 0em !important;
+    margin-right: 0em !important;
   }
 #Ventajas {
   margin-bottom: 4em !important;
   margin-left: 1em !important;
+  margin-right: 0em !important;
 }
 #Ventajas h2{
   margin-left: 0.5em !important;
@@ -818,16 +808,17 @@ footer{
 #Ventajas p{
   margin-left: 1em !important;
 }
-#Ventajas .container{
-  margin: 0 auto;
+#Ventajas .row{
+  margin-right: 0em !important;
 }
 
-#Ventajas .container .custom-card{
+#Ventajas .containerr .custom-card{
   margin-top: 0em !important;
     margin-bottom: 1em !important ;
     margin-left: 0em !important;
     width: auto !important;
     height: 20em;
+    margin-right: 0em !important;
 }
 .solucion {
   margin-top: 2em !important;
