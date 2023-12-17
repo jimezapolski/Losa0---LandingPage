@@ -10,7 +10,7 @@ body {
   height: 100vh;
 }
 .navbar {
-  margin-top: 3em;
+  margin-bottom: 4em !important;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -47,7 +47,7 @@ body {
 }
 .navbar-toggler:focus {
   outline-color: #cfff5599 !important;
-  box-shadow: 0 0 10px rgba(207, 255, 98, 0.58) !important;
+  box-shadow: 0 0 0.625em rgba(207, 255, 98, 0.58) !important;
 }
 
 
@@ -65,11 +65,11 @@ body {
   display: block;
   list-style: none;
   animation: animate 35s linear infinite;
-  bottom: -150px;
-  width: 80px;
-  height: 80px;
+  bottom: -9.3em;
+  width: 5em;
+  height: 5em;
   border-radius: 100%;
-  background: radial-gradient(circle at 10px 10px, #494955, #141414);
+  background: radial-gradient(circle at 0.625em 0.625em, #494955, #141414);
 }
 
 @keyframes animate {
@@ -79,7 +79,7 @@ body {
   }
 
   50% {
-    transform: translateY(-500px) rotate(360deg);
+    transform: translateY(-31.25em) rotate(360deg);
     opacity: 0.5;
   }
 
@@ -89,84 +89,93 @@ body {
   }
 }
 
-.wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  z-index: 1;
-}
-
-.dynamic-txts {
-  margin-left: 0.9375em;
-  height: 5.625em;
-  line-height: 5.625em;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.dynamic-txts li {
-  list-style: none;
-  color: #fff;
-  font-size: 4em;
-  font-weight: 500;
+#span-titulo{
+  color: #cfff62;
+  font-weight: 900;
+  font-size: 1.55em;
   position: relative;
-  top: 0;
-  animation: slide 12s steps(4) infinite;
+  z-index: 1;
 }
 
-@keyframes slide {
-  100% {
-    top: -360px;
+.animated-text{
+  color: #9e9e9e;
+  font-size: 1.7em;
+  font-weight: 400;
+  z-index: 2;
+  margin: 1em 10em;
+  text-align: center;
+  min-width: 17.5em;
+  position: relative;
+  z-index: 1;
+}
+
+.animated-text span{
+  position: relative;
+  font-size: 1.5em;
+}
+
+.animated-text span::before{
+  content: "Eficaz";
+  color: #cfff62;
+  animation: words 16s infinite;
+}
+
+.animated-text span::after{
+  content: "";
+  position: absolute;
+  width: calc(100% + 0.4em);
+  height: 100%;
+  background-color: #000;
+  border-left: 0.125em solid #cfff62;
+  right: -0.2em;
+  animation: cursor .6s infinite, typing 16s steps(10) infinite;
+}
+
+@keyframes cursor {
+  to{
+      border-left: 0.125em solid #ff7f5000;
   }
 }
 
-.dynamic-txts li span {
-  color: #fff !important;
-  position: relative;
-  margin: 5px 0;
-  line-height: 90px;
-}
-
-.dynamic-txts li span::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: #000;
-  border-left: 4px solid #999;
-  animation: typing 3s steps(10) infinite;
+@keyframes words {
+  0%,20%{
+      content: " Eficaz";
+  }
+  21%,40%{
+      content: " Integral";
+  }
+  41%,60%{
+      content: " Única";
+  }
+  61%,80%{
+      content: " Eficaz";
+  }
+  81%,100%{
+      content: " Integral";
+  }
 }
 
 @keyframes typing {
-  40%,
-  60% {
-    left: calc(100% + 50px);
+  10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+      width: 0;
   }
-
-  100% {
-    left: 0;
+  5%,20%,25%,40%,45%,60%,65%,80%,85%{
+      width: calc(100% + 0.4em);
   }
 }
 
-#hero h2 {
-  position: relative;
-  color: #9e9e9e;
-  font-size: 1.5em;
-  font-weight: 400;
-  z-index: 2;
-  margin: 1em 15em;
-  text-align: center;
+#hero {
+ margin-top: 10em !important;
 }
+
 
 span {
   color: #cfff62;
   font-weight: 900;
 }
 .heroVideo {
-  margin-top: 5em;
-  margin-bottom: 16em;
+  margin-top: 3em;
+  margin-bottom: 12em;
   background-image: url("/assets/img/video2.png");
   width: 100vw;
   height: 26em;
@@ -201,23 +210,25 @@ span {
 }
 
 #contacto .card {
-  margin-left: 10em !important;
-  width: 14.8125em;
-  height: 13.3125em;
-  margin-bottom: 1.25em;
-  border-radius: 20px;
+  margin-left: 12em !important;
+  width: 15em;
+  height: 7.3em;
+  margin-bottom: 5em;
+  border-radius: 1.25em;
   background-color: #18181c !important;
 }
 
 #contacto .card-body {
+  border-radius: 1.25em;
   background-color: #18181c !important;
 }
 
 #contacto .card .card-img-top {
-  padding-top: 2em;
+  border-radius: 1.25em;
+  padding-top: 1em;
   margin: 0 auto;
-  width: 116.189px;
-  height: 103.5px;
+  width: 6em;
+  height: 5em;
   background-color: #18181c !important;
 }
 
@@ -227,15 +238,15 @@ span {
   color: #fff;
   text-align: center;
   font-family: Nunito;
-  font-size: 2em;
+  font-size: 1.3em;
   font-style: normal;
   font-weight: 400;
-  line-height: 80px;
+ 
 }
 
 .form-container {
   margin-top: 1.25em;
-  margin-left: 6em;
+  margin-left: 2em;
   position: relative;
   z-index: 2;
 }
@@ -245,7 +256,7 @@ span {
   font-size: 3em;
   font-style: normal;
   font-weight: 400;
-  line-height: 80px;
+  
 }
 
 p {
@@ -253,7 +264,7 @@ p {
   font-size: 1.2em;
   font-style: normal;
   font-weight: 400;
-  line-height: 28px;
+  line-height: 1.75em;
 }
 
 .form-group label {
@@ -261,13 +272,17 @@ p {
   font-size: 0.9em;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 1.25em;
 }
-
+.btn-primary img{
+  width: 2em;
+  height: 2em;
+}
 .btn-primary {
   background-color: #cfff5599 !important;
   border-color: #cfff5599 !important;
   z-index: 2;
+  padding-top: 0.6em;
 }
 
 .icon-form{
@@ -278,20 +293,20 @@ p {
   margin-right: 1em;
   font-size: 2em;
   background-color: #cfff5599 !important;
-  box-shadow: 0 0 10px rgba(207, 255, 98, 0.58) !important;
+  box-shadow: 0 0 0.625em rgba(207, 255, 98, 0.58) !important;
 }
 .form-control:focus {
   border-color: #cfff5599 !important;
-  box-shadow: 0 0 10px rgba(207, 255, 98, 0.58) !important;
+  box-shadow: 0 0  0.625em rgba(207, 255, 98, 0.58) !important;
 }
 
 .btn-primary:focus {
   outline-color: #cfff5599 !important;
-  box-shadow: 0 0 10px rgba(207, 255, 98, 0.58) !important;
+  box-shadow: 0 0  0.625em rgba(207, 255, 98, 0.58) !important;
 }
 
 #Porque {
-  margin-top: 10em;
+  margin-top: 6em;
   margin-left: 10em !important;
   position: relative;
   z-index: 2;
@@ -302,25 +317,27 @@ p {
   font-size: 2.8em;
   font-style: normal;
   font-weight: 400;
-  line-height: 80px;
+
 }
 
-.container-fluid {
+.container-fluidd {
   display: flex;
   justify-items: center;
 }
 
-#Porque .container-fluid {
+#Porque .container-fluidd {
   margin-top: 4em;
   margin-left: 6em !important;
+  padding: 0 !important;
+  margin-right: 1em !important;
 }
 
 .custom-card {
-  width: 15.5em;
+  width: 15.5em !important;
   height: 23.5em;
   background-color: #18181c !important;
   border-radius: 1.25em;
-  padding: 20px;
+  padding: 1.25em;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -337,14 +354,14 @@ p {
   color: #cfff62;
   margin-right: 1.5em;
   font-size: 2.2em;
-  margin-top: 10px;
+  margin-top: 0.625em;
 }
 
 .custom-card img {
   background-color: #18181c !important;
   width: 2.5em;
   height: 2.5em;
-  margin-top: 10px;
+  margin-top: 0.625em;
 }
 
 .custom-card h3 {
@@ -354,7 +371,7 @@ p {
   font-size: 1.2em;
   font-weight: 500;
   line-height: 1.5em;
-  margin-top: 10px;
+  margin-top: 0.625em;
 }
 
 .custom-card p {
@@ -365,11 +382,11 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: 1.75em;
-  margin-top: 10px;
+  margin-top: 0.625em;
 }
 
 #Ventajas {
-  margin-left: 10em !important;
+  margin-left: 8em !important;
 }
 
 #Ventajas h2 {
@@ -377,35 +394,41 @@ p {
   font-size: 2.8em;
   font-style: normal;
   font-weight: 400;
-  line-height: 80px;
+ 
 }
 
+#Ventajas .container{
+  margin-left: 6em !important;
+
+}
 #Ventajas .custom-card {
-  width: 25.5625em;
-  height: 23.1875em;
+  width: 15.5em;
+  height: 23.5em;
   background-color: #18181c !important;
-  color: #fff;
+  border-radius: 1.25em;
+  padding: 1.25em;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  border-radius: 1.25em;
+  color: #fff;
+  
 }
 
 #Ventajas .custom-card img {
   width: 6.5em;
   height: 6.5em;
-  margin-top: 10px;
+  margin-top: 0.625em;
 }
 
-.container-fluid {
+.container-fluidd {
   display: flex;
   justify-items: center;
+  padding: 0 !important;
 }
 
 .solucion {
-  margin-right: 4em !important;
+  margin-right: 9em !important;
 }
 
 .solucion h2 {
@@ -413,24 +436,37 @@ p {
   font-size: 2.8em;
   font-style: normal;
   font-weight: 400;
-  line-height: 80px;
+ 
 }
 
 #Solucion img {
-  margin-top: 10em !important;
+  margin-top: 4em !important;
   margin-left:6em !important;
   width: 31.882em;
   height: 31.882em;
+  background-color: transparent !important;
+
+}
+
+img  {
+  transition: transform 0.3s ease;
+  background-color: transparent !important;
+}
+img:hover{
+  background-color: transparent !important;
+  cursor: pointer;
+  transform: scale(1.2);
 }
 
 .solucion-list ul li {
   color: #fff !important;
   font-size: 1em;
   font-weight: 400;
-  line-height: 3.175em;
+  line-height: 2.5em;
   margin-bottom: 1em;
   margin-bottom: 0.3em;
 }
+
 #Exito h2 {
 text-align: center;
   margin-top: 3em;
@@ -439,7 +475,7 @@ text-align: center;
   font-size: 2.8em;
   font-style: normal;
   font-weight: 400;
-  line-height: 80px;
+ 
 }
 
 .carousel-container {
@@ -456,7 +492,7 @@ text-align: center;
 }
 
 #Exito .carousel {
-  overflow: hidden; /* Oculta las tarjetas que no están en la vista */
+  overflow: hidden !important; 
   position: relative;
   transition: transform 0.5s ease;
 }
@@ -468,7 +504,7 @@ text-align: center;
   align-items: center;
   position: relative;
   z-index: 2;
-  overflow: hidden; /* Oculta las tarjetas que no están en la vista */
+  overflow: hidden !important; 
 }
 
 #Exito .card {
@@ -477,9 +513,9 @@ text-align: center;
   width: 30em;
   height: 21em;
   padding: 1.2em;
-  border: 1px solid #404047;
-  margin-right: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 0.0625em solid #404047;
+  margin-right: 1.25em;
+  box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.1);
   display: inline-block; /* Alinea las tarjetas en línea */
 }
 
@@ -491,15 +527,15 @@ text-align: center;
 #Exito .navigation {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 1.25em;
 }
 
 .circle {
-  width: 10px;
-  height: 10px;
+  width: 0.625em;
+  height: 0.625em;
   background-color: #7f7f7f79 !important;
   border-radius: 50%;
-  margin: 0 5px;
+  margin: 0 0.315em;
   cursor: pointer;
 }
 
@@ -508,7 +544,7 @@ text-align: center;
 }
 
 #Exito .card-text {
-  padding: 10px;
+  padding: 0.625em;
   background-color: #cfff62;
   color: #404047;
 }
@@ -516,7 +552,7 @@ text-align: center;
 #Exito .separator {
   margin: 0 auto;
   width: 80%;
-  height: 1px;
+  height: 0.0625em;
   background-color: #7c7c7c !important;
   position: relative;
   z-index: 2;
@@ -530,8 +566,8 @@ text-align: center;
 
 #Exito .card-image {
   background-color: #18181c !important;
-  width: 50px;
-  height: 50px;
+  width:3.125em;
+  height: 3.125em;
   margin-right: 0.8em;
   margin-top: 0 !important;
   margin-left: 0.8em;
@@ -554,7 +590,7 @@ text-align: center;
 #Exito .separator {
   margin: 0 auto;
   width: 80%;
-  height: 1px;
+  height: 0.025em;
   background-color: #7c7c7c !important;
   position: relative;
   z-index: 2;
@@ -565,7 +601,7 @@ text-align: center;
   color: #fff;
   font-size: 1.1em;
   font-weight: 400;
-  line-height: 38px;
+  line-height: 2.375em;
 }
 
 #Exito .card h4 {
@@ -581,7 +617,7 @@ text-align: center;
   color: #9e9e9e;
   font-size: 0.8em;
   font-weight: 400;
-  line-height: 28px;
+  line-height: 1.75em;
   margin: 0;
 }
 
@@ -598,6 +634,11 @@ text-align: center;
 #Confian h2 {
   margin-top: 3em;
   text-align: center !important;
+  margin-bottom: 1.5em;
+  color: #fff;
+  font-size: 2.8em;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .containe-confian {
@@ -614,7 +655,7 @@ text-align: center;
 
 .logos {
   display: inline-block;
-  margin: 0px 0;
+  margin: 0em 0;
 }
 
 .fab {
@@ -709,39 +750,23 @@ footer{
 
 /* media query */
 
-@media (max-width: 768px) {
+@media (max-width: 48em) {
 
 .navbar-brand {
   padding-left: 1em !important;
 
 }
 
-.dynamic-txts {
-  margin-top: 2em;
-  margin-left: 0.3em;
-  height: 5.625em;
-  line-height: 5.625em;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.dynamic-txts li {
-  list-style: none;
-  color: #fff;
-  font-size: 4em;
-  font-weight: 500;
-  position: relative;
-  top: 0;
-  animation: slide 12s steps(4) infinite;
-}
-
-#hero h2 {
+.animated-text {
   font-size: 1.4em;
   margin: 0 auto;
   text-align: center;
   padding: 1em;
 }
-
+.heroVideo {
+ 
+  margin-bottom: 3em !important;
+}
   #contacto .card {
     margin-top: 1em;
     margin-left: 0 !important;
@@ -753,7 +778,10 @@ footer{
   .btn-primary {
     width: 100%;
   }
-
+  #contacto {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
 #Porque {
   margin-left: 1em !important;
 }
@@ -761,21 +789,25 @@ footer{
   margin-left: 1em !important;
 }
 
-  #Porque .container-fluid {
-    /* margin: 0 auto; */
+  #Porque .container-fluidd {
     margin-top: 0.4em !important;
     margin-left: 0em !important;
-    margin-bottom: 2em !important ;
+    margin-bottom: 2em !important;
+    margin-right: 1em !important;
    
   }
-  #Porque .container-fluid .custom-card{
+  #Porque .container-fluidd .custom-card{
     margin-top: 0em !important;
     margin-bottom: 1em !important ;
     margin-left: 0em !important;
-    width: auto;
+    width: auto !important;
     height: 18em;
+   
+   
   }
-
+  #Ventajas .container{
+    margin-left: 0em !important;
+  }
 #Ventajas {
   margin-bottom: 4em !important;
   margin-left: 1em !important;
@@ -794,7 +826,7 @@ footer{
   margin-top: 0em !important;
     margin-bottom: 1em !important ;
     margin-left: 0em !important;
-    width: auto;
+    width: auto !important;
     height: 20em;
 }
 .solucion {
@@ -816,6 +848,10 @@ footer{
 
 .solucion-list {
   margin-left: 3em !important;
+}
+
+.solucion-list ul li {
+  font-size: 0.85em;
 }
 
 #Confian h2 {
@@ -842,6 +878,9 @@ footer{
   width: 1em; 
  
 }
-
+.circles li {
+  width: 3em;
+  height: 3em;
+}
 
 }
