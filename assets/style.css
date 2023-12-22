@@ -97,6 +97,9 @@ body {
   position: relative;
   z-index: 1;
 }
+#hero{
+  font-family: "Nunito Sans", sans-serif !important;
+}
 
 .animated-text{
   color: #9e9e9e;
@@ -108,20 +111,24 @@ body {
   min-width: 17.5em;
   position: relative;
   z-index: 1;
+  font-family: "Nunito Sans", sans-serif !important;
 }
 
 .animated-text span{
   position: relative;
   font-size: 1.5em;
+  font-family: "Nunito Sans", sans-serif !important;
 }
 
 .animated-text span::before{
   content: "Eficaz";
   color: #cfff62;
   animation: words 16s infinite;
+  font-family: "Nunito Sans", sans-serif !important;
 }
 
 .animated-text span::after{
+  font-family: "Nunito Sans", sans-serif !important;
   content: "";
   position: absolute;
   width: calc(100% + 0.4em);
@@ -140,7 +147,7 @@ body {
 
 @keyframes words {
   0%,20%{
-      content: " Eficaz";
+      content: " Única";
   }
   21%,40%{
       content: " Integral";
