@@ -497,6 +497,7 @@ text-align: center;
   overflow: hidden !important; 
   position: relative;
   transition: transform 0.5s ease;
+  display: flex;
 }
 
 #Exito .carousel-container {
@@ -519,6 +520,8 @@ text-align: center;
   margin-right: 1.25em;
   box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.1);
   display: inline-block; /* Alinea las tarjetas en línea */
+  flex: 0 0 auto; /* Evita que las tarjetas se estiren para llenar el contenedor */
+  margin-right: 1.25em;
 }
 
 #Exito .carousel-container .carousel {
@@ -654,7 +657,13 @@ text-align: center;
   white-space: nowrap;
 
 }
-
+.slider-carrusel{
+  animation: slidein 160s linear infinite ;
+}
+.slider-carrusel .card{
+  width: calc(100% / 5);
+  animation: fade-in 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+}
 .logos {
   display: inline-block;
   margin: 0em 0;
@@ -715,7 +724,26 @@ footer{
   line-height: 1.75em; 
   font-size: 0.875em; 
   color: #cacdd2;
-  
+}
+
+.footer-content a {
+  background-color: #18181C !important;
+  max-width: 31.25em;
+  margin: 1em ; 
+  line-height: 1.75em; 
+  font-size: 0.875em; 
+  color: #cacdd2;
+}
+.footer-content a:hover {
+  color: #cfff62;
+}
+.copyright{
+  line-height: 1.5em; 
+  font-size: 0.5em; 
+  color: #cacdd2;
+  margin: 0 auto;
+  background-color: #18181C !important;
+  max-width: 31.25em;
 }
 
 .socials {
