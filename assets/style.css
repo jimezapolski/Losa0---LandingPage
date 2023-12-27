@@ -112,6 +112,7 @@ body {
   position: relative;
   z-index: 1;
   font-family: "Nunito Sans", sans-serif !important;
+ 
 }
 
 .animated-text span{
@@ -121,22 +122,24 @@ body {
 }
 
 .animated-text span::before{
-  content: "Eficaz";
+  content: "Integral";
   color: #cfff62;
   animation: words 16s infinite;
   font-family: "Nunito Sans", sans-serif !important;
+ 
 }
 
 .animated-text span::after{
   font-family: "Nunito Sans", sans-serif !important;
   content: "";
   position: absolute;
-  width: calc(100% + 0.4em);
+  width: calc(100% + 0.6em);
   height: 100%;
   background-color: #000;
   border-left: 0.125em solid #cfff62;
   right: -0.2em;
   animation: cursor .6s infinite, typing 16s steps(10) infinite;
+  
 }
 
 @keyframes cursor {
@@ -147,19 +150,19 @@ body {
 
 @keyframes words {
   0%,20%{
-      content: " Única";
+      content: "Eficaz ";
   }
   21%,40%{
-      content: " Integral";
+      content: "Integral ";
   }
   41%,60%{
-      content: " Única";
+      content: "Única ";
   }
   61%,80%{
-      content: " Eficaz";
+      content: "Eficaz";
   }
   81%,100%{
-      content: " Integral";
+      content: "Integral ";
   }
 }
 
