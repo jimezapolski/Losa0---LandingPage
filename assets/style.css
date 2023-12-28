@@ -719,7 +719,6 @@ footer{
 
 .footer-content p {
   background-color: #18181C !important;
-  max-width: 31.25em;
   margin: 1em ; 
   line-height: 1.75em; 
   font-size: 0.875em; 
@@ -728,7 +727,6 @@ footer{
 
 .footer-content a {
   background-color: #18181C !important;
-  max-width: 31.25em;
   margin: 1em ; 
   line-height: 1.75em; 
   font-size: 0.875em; 
@@ -743,7 +741,8 @@ footer{
   color: #cacdd2;
   margin: 0 auto;
   background-color: #18181C !important;
-  max-width: 31.25em;
+  text-align: center;
+  
 }
 
 .socials {
@@ -813,7 +812,7 @@ footer{
   margin-left: 1em !important;
 }
 #Porque h2{
-  margin-left: 1em !important;
+text-align: center;
 }
 
   #Porque .container-fluidd {
@@ -842,10 +841,12 @@ footer{
   margin-right: 0em !important;
 }
 #Ventajas h2{
-  margin-left: 0.5em !important;
+  /* margin-left: 0.5em !important; */
+  text-align: center;
 }
 #Ventajas p{
-  margin-left: 1em !important;
+  text-align: center;
+ 
 }
 #Ventajas .row{
   margin-right: 0em !important;
@@ -898,16 +899,29 @@ footer{
   animation: slidein 8s linear infinite;
 }
 
-.footer-content p {
-  margin: 0.8em ; 
+.footer-content a {
+  margin: 0.4em ; 
   font-size: 0.75em; 
 }
-
-.socials a i {
-  font-size: 1.4em;
-  width: 1em; 
- 
+footer{
+  margin-top: 6em;
+  height: 7em;
+  width: 100% !important;
+  height: auto !important;
 }
+footer img{
+  width:1.8em;
+  height: 1.8em;
+}
+.socials {
+ 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* margin: 0.625em 0 1.875em 0;  */
+}
+
 .circles li {
   width: 3em;
   height: 3em;
